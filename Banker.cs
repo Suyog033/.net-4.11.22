@@ -26,7 +26,11 @@ public static class Banker
         return acc;
     }
 
-    public static void FreezeAccount(Account acc)
+    //Extension method is a member of a static class whose 
+    //first parameter is declared with 'this' modifier.
+    //Such a method can be called as an instance method of its
+    //first parameter type by using the namespace of its class
+    public static void FreezeAccount(this Account acc)
     {
         acc.Id = -acc.Id;
     }
